@@ -1,0 +1,24 @@
+void setup() {
+  // put your setup code here, to run once:
+  //Speaker
+  pinMode(9, OUTPUT);
+
+  //Buttons
+  pinMode(2, INPUT);
+  pinMode(1, INPUT);
+
+  
+  
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  buttonState1 = digitalRead(2);
+  buttonState2 = digitalRead(1);
+
+  if (buttonState1 == HIGH){
+    tone(9, 500, 200);
+  }
+}
