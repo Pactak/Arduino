@@ -1,0 +1,45 @@
+char val; // Data received from the serial port
+boolean ledState = LOW; //to toggle our LED
+
+void setup() {
+  
+  //LEDs
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  
+  //Speaker
+  pinMode(8, OUTPUT);
+
+  Serial.begin(9600);
+  establishContact();
+  
+}
+
+void loop()
+{
+  if (Serial.available() > 0) { // If data is available to read,
+    val = Serial.read(); // read it and store it in val
+
+    if(val == '1') //if we get a 1
+    {
+       ledState = !ledState; //flip the ledState
+       digitalWrite(ledPin, ledState); 
+    }
+    delay(100);
+  } 
+    else {
+    Serial.println("Hello, world!"); //send back a hello world
+    delay(50);
+    }
+}
+
+void establishContact() {
+  while (Serial.available() <= 0) {
+  Serial.println("A");   // send a capital A
+  delay(300);
+  }
+}
