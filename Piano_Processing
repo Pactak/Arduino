@@ -1,0 +1,54 @@
+void setup(){
+  background(0);
+  size(1000,600);
+}
+
+void draw(){  
+  Piano();
+  //fill(255, 0, 0);
+  println(mouseX, mouseY);
+}
+
+void Piano(){
+  fill(240);
+  strokeWeight(3);
+  rectMode(CENTER);
+  rect(500, 300, 800, 400, 0, 0, 50, 50);
+  
+  for(int i = 200; i < 1000; i = i + 100){
+    line(i, 100, i, 500);
+    ellipse(i - 50, 440, 75, 75); 
+  }
+  
+  textSize(32);
+  fill(255, 0, 0);
+  text('C', 140, 450);
+  
+  textSize(32);
+  fill(255, 0, 0);
+  text('C', 840, 450);
+  
+  textSize(32);
+  fill(59, 255, 5);
+  text('D', 240, 450);
+  
+  textSize(32);
+  fill(135, 142, 25);
+  text('E', 340, 450);
+  
+  textSize(32);
+  fill(59, 255, 5);
+  text('F', 440, 450);
+  
+  textSize(32);
+  fill(135, 142, 25);
+  text('G', 540, 450);
+  
+  textSize(32);
+  fill(59, 255, 5);
+  text('A', 640, 450);
+  
+  textSize(32);
+  fill(135, 142, 25);
+  text('B', 740, 450);
+}
