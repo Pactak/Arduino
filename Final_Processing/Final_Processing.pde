@@ -3,9 +3,13 @@ import processing.serial.*; //import the Serial library
  String val;
  boolean firstContact = false;
 
+PImage img;
+
 void setup(){
   background(0);
   size(1000,600);
+  img = loadImage("finger.png");
+  frameRate(60);
   
   myPort = new Serial(this, Serial.list()[1], 9600);
   myPort.bufferUntil('\n'); 
@@ -46,6 +50,8 @@ void draw(){
   textSize(32);
   fill(0);
   text('B', 740, 450);
+  
+  image(img, mouseX - 75, mouseY - 20);
   
   //println(mouseX, mouseY);
 }
