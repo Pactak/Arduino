@@ -27,36 +27,36 @@ void loop()
 
     if(val == 'C'){
       digitalWrite(2, HIGH); 
-      delay(100);
-      tone(10, 261, 200);
+      delay(75);
+      tone(10, 261, 150);
     } if(val == 'D'){
       digitalWrite(3, HIGH);
-      delay(100);
+      delay(75);
       tone(10, 293, 150);
      }
     } if(val == 'E'){
       digitalWrite(4, HIGH);
-      delay(100);
+      delay(75);
       tone(10, 329, 150);
      } if(val == 'F'){
       digitalWrite(5, HIGH);
-      delay(100);
+      delay(75);
       tone(10, 349, 150);
      } if(val == 'G'){
       digitalWrite(6, HIGH);
-      delay(100);
+      delay(75);
       tone(10, 391, 150);
      } if(val == 'a'){
       digitalWrite(7, HIGH);
-      delay(100);
+      delay(75);
       tone(10, 440, 150);
      } if(val == 'B'){
       digitalWrite(8, HIGH);
-      delay(100);
+      delay(75);
       tone(10, 493, 150);
      } if(val == 'H'){ //Second C
       digitalWrite(9, HIGH);
-      delay(100);
+      delay(75);
       tone(10, 523, 150);
      }
      
